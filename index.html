@@ -38,659 +38,663 @@
                             <span style="color: #6c6c6c; font-weight: 500;">AF-000020</span>
                         </div>
                     </div>
+                    <div class="container">
+                        <form action="/OnlineAdmission/Add" method="post" id="rsubmit" enctype="multipart/form-data" autocomplete="off">
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8DW5MYT5n7VNs6WjklMj4JSVBrros3ZIQ0xvpVQjlnegeeNjJrhnw7nLxfMXPgiUNIOfKTm1JMsYKrLymql6SyUwSYqnNvEyATlk_-x5_zXYF_K-rxBJDBbJut2uFqbpq9F7hMeq8ORqmsaodbFxxCI">
+                            
+                            <div class="row pl-4 studentinfo loaddiv">
+                                <input type="hidden" name="returnUrl" value="">
+                                <div class="col-sm-12">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                        </div>
+                                        <div class="col-sm-6" style="text-align:center">
+                                            <h4 style=" color: #8d8d8d; text-shadow: 2px 2px #ededed; font-size: 22px; margin: 20px;"><em class="resource.OnlineAdmissionAdd.AdmissionForm">Admission Form</em></h4>
+                                        </div>
+                                        <div class="col-sm-3 form-group pr-4">
+                    
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                    
+                    
+                                <div class="col-sm-12 section-div">
+                                    <h5><em class="resource">Academic Information</em></h5>
+                                    <hr>
+                                    <div class="row pr-4">
+                                        <div class="col-sm-4 form-group">
+                                            <label for="SessionId" class="form-control-label"><span class="label-name"><em class="resource">Admission Session</em></span> <span class="astericSign">✱</span></label>
+                                            <select class="form-control validate" id="SessionId" name="SessionId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true">
+                                                <option value="" class="resource">Select Session</option>
+                                                        <option value="12" selected="">Jan-2023-Dec-2023</option>
+                                                        <option value="13">Jan-2024-Dec-2024</option>
+                                                        <option value="55">Mar-2025-Mar-2029</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-4 form-group">
+                                            <label for="ClassId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.AdmitToClass">Admit To Class</em></span> <span class="astericSign">✱</span></label>
+                                            <select class="form-control validate ClassId" id="ClassId" isrequired="true" name="ClassId" validationevents="change" validationrules="IsZeroOrEmptySelected"><option value="">Select</option>
+                    <option value="1">One</option>
+                    <option value="2">Play</option>
+                    <option value="3">Nursery</option>
+                    <option value="4">Two</option>
+                    <option value="5">Three</option>
+                    <option value="6">Four</option>
+                    <option value="13">Five</option>
+                    <option value="14">Six</option>
+                    <option value="15">Seven</option>
+                    <option value="16">Class Nine Plus</option>
+                    <option value="17">21-22</option>
+                    <option value="18">spoken</option>
+                    <option value="19">SPOKEN</option>
+                    <option value="23">21-22(A)</option>
+                    <option value="25">21-22(D)</option>
+                    <option value="26">শিশু</option>
+                    <option value="27">two</option>
+                    <option value="28">class ten plus</option>
+                    <option value="29">one</option>
+                    </select>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-sm-12 section-div" style="padding-right: 25px;">
+                                    <h5><em class="resource.OnlineAdmissionAdd.StudentInformation">Student Information</em></h5>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <div class="row studentinfo">
+                                                <div class="col-sm-4 form-group">
+                                                    <label for="FirstName" class=" form-control-label mt-2"><span class="label-name"><em class="resource.OnlineAdmissionAdd.FirstName">First Name</em></span> <span class="astericSign">✱</span></label>
+                                                    <input class="form-control validate" id="FirstName" isrequired="true" name="FirstName" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsSpecialCharWithoutSpaceAndDot" value="">
+                                                </div>
+                                                <div class="col-sm-4 form-group">
+                                                    <label for="MiddleName" class="form-control-label mt-2"><span class="label-name"><em class="resource.OnlineAdmissionAdd.MiddleName">Middle Name</em></span></label>
+                                                    <input class="form-control validate " id="MiddleName" isrequired="false" name="MiddleName" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsSpecialCharWithoutSpaceAndDot" value=""><div class="all-error-msg d--grid"></div>
+                                                </div>
+                                                <div class="col-sm-4 form-group">
+                                                    <label for="LastName" class="form-control-label mt-2"><span class="label-name"><em class="resource.OnlineAdmissionAdd.LastName">Last Name</em></span></label>
+                                                    <input class="form-control validate " id="LastName" name="LastName" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsSpecialCharWithoutSpaceAndDot" value=""><div class="all-error-msg d--grid"></div>
+                                                </div>
+                    
+                                                <div class="col-sm-4 form-group">
+                                                    <label for="GenderId" class=" form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Gender">Gender</em></span> <span class="astericSign">✱</span></label>
+                                                    <select class="form-control validate" id="GenderId" isrequired="true" name="GenderId" validationevents="change" validationrules="IsZeroOrEmptySelected"><option value="">Select Gender</option>
+                    <option value="21">Male</option>
+                    <option value="22">Female</option>
+                    <option value="23">Other</option>
+                    <option value="1244">পুরুষ</option>
+                    </select>
+                                                </div>
+                    
+                                                <div class="col-sm-4 form-group">
+                                                    <label for="BirthDate" class="form-control-label "><span class="label-name">
+                                                        <em class="resource.OnlineAdmissionAdd.DateOfBirth">Date of Birth</em>
+                                                    </span> <span class="astericSign">✱</span></label>
+                                                    <input class="form-control validate BirthDate" id="BirthDate" isrequired="true" name="BirthDate" readonly="readonly" type="text" validationevents="change" validationrules="IsNullOrEmptyOrUndefined" value="">
+                                                </div>
+                                                <input type="hidden" name="Age" value="0" class="Age">
+                                                <div class="col-sm-4 form-group">
+                                                    <label for="UniqueId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.UniqueId">Unique Id</em></span></label>
+                                                    <input class="form-control UniqueId validate" id="UniqueId" name="UniqueId" suggestion="Add Govt. Provided Unique Id" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div><div class="suggestion-text">Add Govt. Provided Unique Id</div>
+                                                </div>
+                                                <div class="col-sm-4 form-group">
+                                                    <label for="Mobile" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Mobile">Mobile</em></span> <span class="astericSign">✱</span></label>
+                                                    <input class="form-control Mobile validate" id="Mobile" isrequired="true" name="Mobile" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsOnlyNumbers" value="">
+                                                </div>
+                    
+                                                <div class="col-sm-4 form-group">
+                                                    <div class="col-sm-3">
+                                                        <label for="Email" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Email">Email</em></span></label>
+                                                    </div>
+                                                    <input class="form-control Email validate" id="Email" isrequired="false" name="Email" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                                                </div>
+                                                <div class="col-sm-4 form-group">
+                                                    <label for="ReligionId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Religion">Religion</em></span> <span class="astericSign">✱</span></label>
+                                                    <select class="form-control ReligionId validate" id="ReligionId" isrequired="true" name="ReligionId" validationevents="change" validationrules="IsZeroOrEmptySelected"><option value="">Select</option>
+                    <option value="55">Islam</option>
+                    <option value="1180">Hindu</option>
+                    <option value="1245">RC</option>
+                    </select>
+                    
+                                                </div>
+                                                <div class="col-sm-4 form-group">
+                                                    <label for="BirthCertificateNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.BirthCertificateNo">Birth Certificate No</em></span></label>
+                                                    <input class="form-control validate" id="BirthCertificateNo" isrequired="false" name="BirthCertificateNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                                                </div>
+                                                <div class="col-sm-4 form-group">
+                                                    <label for="NationalityId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Nationality">Nationality</em> </span> <span class="astericSign">✱</span></label>
+                                                    <select class="form-control NationalityId validate" id="NationalityId" isrequired="true" name="NationalityId" validationevents="change" validationrules="IsZeroOrEmptySelected"><option value="">Select Nationality</option>
+                    <option value="35">Bangladeshi</option>
+                    <option value="36">American</option>
+                    <option value="58">Indian</option>
+                    </select>
+                                                </div>
+                    
+                                                <div class="col-sm-2 form-group">
+                                                    <label for="Height" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Height">Height</em></span></label>
+                                                    <input class="form-control validate" id="Height" name="Height" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                                </div>
+                                                <div class="col-sm-2 form-group">
+                                                    <label for="Weight" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Weight">Weight</em></span></label>
+                                                    <input class="form-control validate" id="Weight" name="Weight" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                                                </div>
+                                                <div class="col-sm-4 form-group">
+                                                    <label for="BloodId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.BloodGroup">Blood Group</em> </span></label>
+                                                    <select class="form-control BloodId validate" id="BloodId" isrequired="false" name="BloodId" validationevents="change" validationrules="IsZeroOrEmptySelected"><option value="">Select</option>
+                    <option value="27">A (+ve)</option>
+                    <option value="28">A (-ve)</option>
+                    <option value="29">B (+ve)</option>
+                    <option value="30">B (-ve)</option>
+                    <option value="31">AB (+ve)</option>
+                    <option value="32">AB (-ve)</option>
+                    <option value="33">O (+ve)</option>
+                    <option value="34">O (-ve)</option>
+                    </select><div class="all-error-msg d--grid"></div>
+                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <div class="avatar-upload">
+                                                <label for="imageUpload" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.StudentImage">Student Image</em> </span> <span class="astericSign">✱</span></label>
+                                                <div class="avatar-preview" style="margin-bottom: 4px;">
+                                                    <div id="imagePreview"></div>
+                                                </div>
+                                                <div class="">
+                                                    <input type="file" id="imageUpload" onclick="imageUppload(this)" class="validate form-control StudentImage" accept="image/*" name="StudentPhotoFile" isrequired="true" validationrules="file:types=jpg|jpeg|png, file:size:minsize=0 &amp; maxsize = 5048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
+                    
+                                                    <input class="form-control StudentPhotoPath" id="StudentPhotoPath" name="StudentPhotoPath" type="hidden" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 section-div">
+                    
+                                    <h5><em class="resource.OnlineAdmissionAdd.PresentAddress">Present Address</em></h5>
+                                    <hr>
+                                    <div class="row pr-4">
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PresCountryId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Country">Country</em></span> <span class="astericSign">✱</span></label>
+                                            <select class="form-control validate PresCountryId OutsideEditable" id="PresCountryId" name="PresCountryId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true">
+                                                <option value="" class="resource">Select Country</option>
+                                                    <option value="1">বাংলাদেশ</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PresDivisionId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Division">Division</em></span> <span class="astericSign">✱</span></label>
+                                            <svg style="display: none;color: blue;" class="svg-inline--fa fa-spinner fa-w-16 fa-pulse I-loadingDiv" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path></svg><!-- <i style="display:none;color:blue" class="fas fa-spinner fa-pulse I-loadingDiv"></i> -->
+                                            <select class="form-control validate PresDivisionId OutsideEditable" id="PresDivisionId" name="PresDivisionId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true" aria-invalid="false">
+                                                <option value="0" class="resource">Select Division</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PresCityId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.District">District</em></span> <span class="astericSign">✱</span></label>
+                                            <svg style="display: none;color: blue;" class="svg-inline--fa fa-spinner fa-w-16 fa-pulse I-loadingDis" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path></svg><!-- <i style="display:none;color:blue" class="fas fa-spinner fa-pulse I-loadingDis"></i> -->
+                                            <select class="form-control validate PresCityId OutsideEditable" id="PresCityId" name="PresCityId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true" aria-invalid="false">
+                                                <option value="0" class="resource">Select District</option>
+                                            </select>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PresThanaId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Thana">Thana</em></span> <span class="astericSign">✱</span></label>
+                                            <svg style="display: none;color: blue;" class="svg-inline--fa fa-spinner fa-w-16 fa-pulse I-loadingTha" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path></svg><!-- <i style="display:none;color:blue" class="fas fa-spinner fa-pulse I-loadingTha"></i> -->
+                                            <select class="form-control validate PresThanaId OutsideEditable" id="PresThanaId" name="PresThanaId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true" aria-invalid="false">
+                                                <option value="0" class="resource">Select Thana</option>
+                                            </select>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PresHoldingNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.HoldingNo">Holding No</em></span></label>
+                                            <input class="form-control validate PresHoldingNo" id="PresHoldingNo" name="PresHoldingNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PresStreet" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.StreetNo">Street No</em></span></label>
+                                            <input class="form-control PresStreet validate" id="PresStreet" isrequired="false" name="PresStreet" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PresArea" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Area">Village / Area</em></span></label>
+                                            <input class="form-control PresArea validate" id="PresArea" name="PresArea" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PresPostCode" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.PostCode">Post Code</em></span></label>
+                                            <input class="form-control PresPostCode validate" id="PresPostCode" name="PresPostCode" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                    
+                    
+                                    </div>
+                    
+                                </div>
+                                <div class="col-sm-12 section-div">
+                                    <div class="mt-3"></div>
+                                    <label class="kt-checkbox SameAsPermanentCheak kt-checkbox--brand">
+                                        <input type="checkbox" class="SameAsPresent"> <em class="resource.StudentEntry.SameAsPresentAddress">Same as Present Address</em>
+                                        <span></span>
+                                    </label>
+                                    <h5><em class="resource.OnlineAdmissionAdd.PermanentAddress">Permanent Address</em></h5>
+                                    <hr>
+                                    <div class="row pr-4">
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PermCountryId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Country">Country</em></span> <span class="astericSign">✱</span></label>
+                                            <select class="form-control validate PermCountryId OutsideEditable" id="PermCountryId" name="PermCountryId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true" aria-invalid="false">
+                                                <option value="" class="resource">Select Country</option>
+                                                    <option value="1">বাংলাদেশ</option>
+                                            </select>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PermDivisionId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Division">Division</em></span> <span class="astericSign">✱</span></label>
+                                            <svg style="display: none;color: blue;" class="svg-inline--fa fa-spinner fa-w-16 fa-pulse PI-loadingDiv" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path></svg><!-- <i style="display:none;color:blue" class="fas fa-spinner fa-pulse PI-loadingDiv"></i> -->
+                                            <select class="form-control validate PermDivisionId OutsideEditable" id="PermDivisionId" name="PermDivisionId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true" aria-invalid="false">
+                                                <option value="0" class="resource">Select Division</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PermCityId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.District">District</em></span> <span class="astericSign">✱</span></label>
+                                            <svg style="display: none;color: blue;" class="svg-inline--fa fa-spinner fa-w-16 fa-pulse PI-loadingDis" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path></svg><!-- <i style="display:none;color:blue" class="fas fa-spinner fa-pulse PI-loadingDis"></i> -->
+                                            <select class="form-control validate PermCityId OutsideEditable" id="PermCityId" name="PermCityId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true" aria-invalid="false">
+                                                <option value="0" class="resource">Select District</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PermThanaId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Thana">Thana</em></span> <span class="astericSign">✱</span></label>
+                                            <svg style="display: none;color: blue;" class="svg-inline--fa fa-spinner fa-w-16 fa-pulse PI-loadingTha" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path></svg><!-- <i style="display:none;color:blue" class="fas fa-spinner fa-pulse PI-loadingTha"></i> -->
+                                            <select class="form-control validate PermThanaId OutsideEditable" id="PermThanaId" name="PermThanaId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true" aria-invalid="false">
+                                                <option value="0" class="resource">Select Thana</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PermHoldingNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.HoldingNo">Holding No</em></span></label>
+                                            <input class="form-control validate PermHoldingNo" id="PermHoldingNo" name="PermHoldingNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PermStreet" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.StreetNo">Street No</em></span></label>
+                                            <input class="form-control PermStreet validate" id="PermStreet" isrequired="false" name="PermStreet" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PermArea" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Area">Village / Area</em></span></label>
+                                            <input class="form-control PermArea validate" id="PermArea" name="PermArea" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PermPostCode" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.PostCode">Post Code</em></span></label>
+                                            <input class="form-control PermPostCode validate" id="PermPostCode" name="PermPostCode" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                    
+                    
+                                    </div>
+                                </div>
+                    
+                                <div class="col-sm-12 section-div">
+                                    <h5><em class="resource.OnlineAdmissionAdd.FatherSInformation">Father's Information</em></h5>
+                                    <hr>
+                                    <div class="row pr-4">
+                                        <div class="col-sm-3 form-group">
+                                            <label for="FatherName" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Name">Full Name</em></span> <span class="astericSign">✱</span></label>
+                                            <input class="form-control validate FatherFirstName" id="FatherName" isrequired="true" name="FatherName" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsSpecialCharWithoutSpaceAndDot" value="">
+                    
+                                        </div>
+                    
+                                        <div class="col-sm-3 form-group">
+                                            <label for="FatherOccupation" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Occupation">Occupation</em></span></label>
+                                            <input class="form-control FatherOccupation validate" id="FatherOccupation" name="FatherOccupation" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                    
+                                        <div class="col-sm-3 form-group">
+                                            <label for="FatherMobile" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Mobile">Mobile</em></span></label>
+                                            <input class="form-control FatherMobile validate" id="FatherMobile" name="FatherMobile" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsOnlyNumbers" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="FatherEducation" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Education">Education</em></span></label>
+                                            <input class="form-control  validate" id="FatherEducation" name="FatherEducation" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="FatherOfficeAddress" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.OfficeAddress">Office Address</em></span></label>
+                                            <input class="form-control  validate" id="FatherOfficeAddress" name="FatherOfficeAddress" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="FatherOfficePhone" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.OfficePhone">Office Phone</em></span></label>
+                                            <input class="form-control FatherOfficePhone validate" id="FatherOfficePhone" name="FatherOfficePhone" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="FatherNationalId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.NID">NID</em></span></label>
+                                            <input class="form-control FatherNationalId validate" id="FatherNationalId" name="FatherNationalId" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="FatherPassportNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.PassportNo">Passport No</em></span></label>
+                                            <input class="form-control FatherPassportNo validate" id="FatherPassportNo" name="FatherPassportNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="FatherDoB" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.DateOfBirth">Date of Birth</em></span></label>
+                                            <input class="form-control FatherDoB validate" id="FatherDoB" name="FatherDoB" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="FBrthCertificateNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.BrthCertificateNo">Brth Certificate No</em></span></label>
+                                            <input class="form-control FatherOccupation validate" id="FBrthCertificateNo" name="FBrthCertificateNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="FatherDeathYear" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.DeathYearIfDied">Death Year(if died)</em></span></label>
+                                            <input class="form-control FatherDeathYear validate" id="FatherDeathYear" name="FatherDeathYear" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="FatherPhoto" class="form-control-label"><em class="resource.OnlineAdmissionAdd.Photo">Photo</em></label>
+                                            <input type="file" class="validate form-control FatherPhoto" name="FatherPhotoFile" isrequired="true" validationrules="file:types = jpg|jpeg|png, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                    
+                                <div class="col-sm-12 section-div">
+                                    <h5><em class="resource.OnlineAdmissionAdd.MotherSInformation">Mother's Information</em></h5>
+                                    <hr>
+                                    <div class="row pr-4">
+                                        <div class="col-sm-3 form-group">
+                                            <label for="MotherName" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Name">Full Name</em></span> <span class="astericSign">✱</span></label>
+                                            <input class="form-control validate FatherFirstName" id="MotherName" isrequired="true" name="MotherName" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsSpecialCharWithoutSpaceAndDot" value="">
+                    
+                                        </div>
+                    
+                                        <div class="col-sm-3 form-group">
+                                            <label for="MotherOccupation" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Occupation">Occupation</em></span></label>
+                                            <input class="form-control FatherOccupation validate" id="MotherOccupation" name="MotherOccupation" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                    
+                                        <div class="col-sm-3 form-group">
+                                            <label for="MotherMobile" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Mobile">Mobile</em></span></label>
+                                            <input class="form-control FatherMobile validate" id="MotherMobile" name="MotherMobile" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsOnlyNumbers" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="MotherEducation" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Education">Education</em></span></label>
+                                            <input class="form-control  validate" id="MotherEducation" name="MotherEducation" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="MotherOfficeAddress" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.OfficeAddress">Office Address</em></span></label>
+                                            <input class="form-control  validate" id="MotherOfficeAddress" name="MotherOfficeAddress" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="MotherOfficePhone" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.OfficePhone">Office Phone</em></span></label>
+                                            <input class="form-control  validate" id="MotherOfficePhone" name="MotherOfficePhone" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="MotherNationalId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.NID">NID</em></span></label>
+                                            <input class="form-control  validate" id="MotherNationalId" name="MotherNationalId" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="MotherPassportNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.PassportNo">Passport No</em></span></label>
+                                            <input class="form-control validate" id="MotherPassportNo" name="MotherPassportNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="MotherDoB" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.DateOfBirth">Date of Birth</em></span></label>
+                                            <input class="form-control FatherDoB validate" id="MotherDoB" name="MotherDoB" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="MBrthCertificateNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.BirthCertificateNo">Birth Certificate No</em></span></label>
+                                            <input class="form-control FatherOccupation validate" id="MBrthCertificateNo" name="MBrthCertificateNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="MotherDeathYear" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.DeathYearIfDied">Death Year(if died)</em></span></label>
+                                            <input class="form-control FatherDeathYear validate" id="MotherDeathYear" name="MotherDeathYear" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="MotherPhoto" class="form-control-label"><em class="resource.OnlineAdmissionAdd.Photo">Photo</em></label>
+                                            <input type="file" class="validate form-control MotherPhoto" name="MotherPhotoFile" isrequired="true" validationrules="file:types = jpg|jpeg|png, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                    
+                                <div class="col-sm-12 section-div">
+                                    <h5><em class="resource.OnlineAdmissionAdd.LocalGuardianSInformation">Local Guardian's Information</em></h5>
+                                    <hr>
+                                    <div class="row pr-4">
+                                        <div class="col-sm-3 form-group">
+                                            <label for="LocGuardianFirstName" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Name">Full Name</em></span></label>
+                                            <input class="form-control validate FatherFirstName" id="LocGuardianFirstName" name="LocGuardianFirstName" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsSpecialCharWithoutSpaceAndDot" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                    
+                                        <div class="col-sm-3 form-group">
+                                            <label for="LocGuardianRelationship" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Relationship">Relationship</em></span></label>
+                                            <input class="form-control FatherOccupation validate" id="LocGuardianRelationship" name="LocGuardianRelationship" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                    
+                                        <div class="col-sm-3 form-group">
+                                            <label for="LocGuardianMobile" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Mobile">Mobile</em></span></label>
+                                            <input class="form-control FatherMobile validate" id="LocGuardianMobile" name="LocGuardianMobile" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsOnlyNumbers" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="LocalGurdianNationalId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.NID">NID</em></span></label>
+                                            <input class="form-control  validate" id="LocalGurdianNationalId" name="LocalGurdianNationalId" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="LocalGurdianPassportNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.PassportNo">Passport No</em></span></label>
+                                            <input class="form-control validate" id="LocalGurdianPassportNo" name="LocalGurdianPassportNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="LocalGurdianPhoto" class="form-control-label"><em class="resource.OnlineAdmissionAdd.Photo">Photo</em></label>
+                                            <input type="file" class="validate form-control MotherPhoto" name="LocalGurdianPhotoFile" validationrules="file:types = jpg|jpeg|png, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                    
+                                    <div class="col-sm-12 section-div subject-div-parent">
+                                        <h5><em class="resource">Student Subjects</em></h5>
+                                        <hr>
+                                        <div class="row pr-4">
+                                                      <div class="col-sm-6">
+                                                <table class="table table-bordered example" id="example" style="width:100%">
+                                                    <thead>
+                                                        <tr class="selectallRow">
+                                                            <th>
+                                                                <div class="form-check">
+                                                                    <label class="kt-checkbox kt-checkbox--brand" id="kt-checkboxAll">
+                                                                        <input type="checkbox" class="form-check-input parent-checkbox" onchange="selectAllSubjects(this)">
+                                                                        <span></span>
+                                                                        <em class="checkbox-text" style="font-weight:500;">Select All</em>
+                                                                    </label>
+                                                                </div>
+                                                            </th>
+                                                            <th>Subjects</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="appendsubject">
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                    
+                                                <div class="col-sm-5 form-group">
+                                                <label for="OptionalSubjectId" class="form-control-label"><em class="resource">Optional Subject</em></label>
+                                                <select class="form-control" id="OptionalSubjectId" name="OptionalSubjectId">
+                                                    <option value="">Select</option>
+                                                </select>
+                                            </div>
+                    
+                                            
+                                        </div>
+                                    </div>
+                         
+                    
+                    
+                                <div class="col-sm-12 section-div">
+                                    <h5><em class="resource.OnlineAdmissionAdd.PerviousInstitutionInformation">Pervious Institution Information</em></h5>
+                                    <hr>
+                                    <div class="row pr-4">
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PrevSchool" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.InstitutionName">Institution Name</em></span></label>
+                                            <input class="form-control PrevSchool validate" id="PrevSchool" name="PrevSchool" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-3 form-group">
+                                            <label for="PrevClass" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Class">Class</em></span></label>
+                                            <input class="form-control PrevClass validate" id="PrevClass" name="PrevClass" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-2 form-group">
+                                            <label for="PrevSection" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Section">Section</em></span></label>
+                                            <input class="form-control PrevSection validate" id="PrevSection" name="PrevSection" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                        <div class="col-sm-2 form-group">
+                                            <label for="PrevRoll" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.RollNumber">Roll Number</em></span></label>
+                                            <input class="form-control PrevRoll validate" id="PrevRoll" name="PrevRoll" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsOnlyNumbers" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                    
+                                        <div class="col-sm-2 form-group">
+                                            <label for="PrevResult" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Result">Result</em></span></label>
+                                            <input class="form-control PrevResult validate" id="PrevResult" name="PrevResult" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
+                    
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                                        <div class="col-sm-12 pb-4">
+                                            <h5><em class="resource.OnlineAdmissionAdd.EducationalBoardInformation">Educational Board Information</em></h5>
+                                            <hr>
+                    
+                                                <div class="row pr-4 pb-4">
+                                                    <input class="form-control readonly-bg-grey id" id="" name="VmStudentPreviousExams[0].Id" type="hidden" value="0" readonly="">
+                                                    <div class="col-sm-3 examname">
+                                                        <h6>SSC</h6>
+                                                        <input class="form-control readonly-bg-grey" id="" name="VmStudentPreviousExams[0].ExamName" type="hidden" value="1223">
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <label for="example-text-input" class="form-control-label"> <em class="resource.OnlineAdmissionAdd.ExamYear">Exam Year</em></label>
+                                                        <input class="form-control readonly-bg-grey examyear" id="" name="VmStudentPreviousExams[0].ExamYear" type="text">
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <label for="example-text-input" class="form-control-label"><em class="resource.OnlineAdmissionAdd.RollNumber">Roll Number</em></label>
+                                                        <input class="form-control readonly-bg-grey roll" id="" name="VmStudentPreviousExams[0].RollNumber" type="text">
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <label for="example-text-input" class="form-control-label"> <em class="resource.OnlineAdmissionAdd.RegistrationNo">Registration No</em></label>
+                                                        <input class="form-control readonly-bg-grey regNo" id="" name="VmStudentPreviousExams[0].RegNumber" type="text">
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <label for="example-text-input" class="form-control-label"> <em class="resource.OnlineAdmissionAdd.Result">Result</em></label>
+                                                        <input class="form-control readonly-bg-grey result" id="" name="VmStudentPreviousExams[0].Result" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="row pr-4 pb-4">
+                                                    <input class="form-control readonly-bg-grey id" id="" name="VmStudentPreviousExams[1].Id" type="hidden" value="0" readonly="">
+                                                    <div class="col-sm-3 examname">
+                                                        <h6>HSC</h6>
+                                                        <input class="form-control readonly-bg-grey" id="" name="VmStudentPreviousExams[1].ExamName" type="hidden" value="1224">
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <label for="example-text-input" class="form-control-label"> <em class="resource.OnlineAdmissionAdd.ExamYear">Exam Year</em></label>
+                                                        <input class="form-control readonly-bg-grey examyear" id="" name="VmStudentPreviousExams[1].ExamYear" type="text">
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <label for="example-text-input" class="form-control-label"><em class="resource.OnlineAdmissionAdd.RollNumber">Roll Number</em></label>
+                                                        <input class="form-control readonly-bg-grey roll" id="" name="VmStudentPreviousExams[1].RollNumber" type="text">
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <label for="example-text-input" class="form-control-label"> <em class="resource.OnlineAdmissionAdd.RegistrationNo">Registration No</em></label>
+                                                        <input class="form-control readonly-bg-grey regNo" id="" name="VmStudentPreviousExams[1].RegNumber" type="text">
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <label for="example-text-input" class="form-control-label"> <em class="resource.OnlineAdmissionAdd.Result">Result</em></label>
+                                                        <input class="form-control readonly-bg-grey result" id="" name="VmStudentPreviousExams[1].Result" type="text">
+                                                    </div>
+                                                </div>
+                                        </div>
+                    
+                                <div class="col-sm-12">
+                                    <h5><em class="resource.OnlineAdmissionAdd.AttachFiles">Attach Files</em></h5>
+                                    <hr>
+                                    <div class="row pr-4">
+                                            <div class="col-sm-3 form-group">
+                                                <input type="hidden" name="StudentRelatedFiles[0].FileForId" value="324">
+                                                <label for="Birth Certificate" class="form-control-label">Birth Certificate</label>
+                                                <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[0].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
+                                            </div>
+                                            <div class="col-sm-3 form-group">
+                                                <input type="hidden" name="StudentRelatedFiles[1].FileForId" value="325">
+                                                <label for="Transfer Certificate" class="form-control-label">Transfer Certificate</label>
+                                                <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[1].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
+                                            </div>
+                                            <div class="col-sm-3 form-group">
+                                                <input type="hidden" name="StudentRelatedFiles[2].FileForId" value="326">
+                                                <label for="Testimonial" class="form-control-label">Testimonial</label>
+                                                <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[2].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
+                                            </div>
+                                            <div class="col-sm-3 form-group">
+                                                <input type="hidden" name="StudentRelatedFiles[3].FileForId" value="327">
+                                                <label for="Academic Certificate" class="form-control-label">Academic Certificate</label>
+                                                <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[3].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
+                                            </div>
+                                            <div class="col-sm-3 form-group">
+                                                <input type="hidden" name="StudentRelatedFiles[4].FileForId" value="328">
+                                                <label for="Marksheet" class="form-control-label">Marksheet</label>
+                                                <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[4].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
+                                            </div>
+                                            <div class="col-sm-3 form-group">
+                                                <input type="hidden" name="StudentRelatedFiles[5].FileForId" value="329">
+                                                <label for="Testimonial" class="form-control-label">Testimonial</label>
+                                                <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[5].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
+                                            </div>
+                                            <div class="col-sm-3 form-group">
+                                                <input type="hidden" name="StudentRelatedFiles[6].FileForId" value="330">
+                                                <label for="Father's NID" class="form-control-label">Father's NID</label>
+                                                <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[6].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
+                                            </div>
+                                            <div class="col-sm-3 form-group">
+                                                <input type="hidden" name="StudentRelatedFiles[7].FileForId" value="331">
+                                                <label for="Mother's NID" class="form-control-label">Mother's NID</label>
+                                                <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[7].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
+                                            </div>
+                                    </div>
+                    
+                                </div>
+                                <div class="col-sm-12 p-5" style="text-align:center">
+                                    <button class="btn btn-primary" id="updateBtn"><em class="resource.OnlineAdmissionAdd.Submit">Submit</em></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
+            
         </div>
     </section>
-    <form action="/OnlineAdmission/Add" method="post" id="rsubmit" enctype="multipart/form-data" autocomplete="off">
-        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8DW5MYT5n7VNs6WjklMj4JSVBrros3ZIQ0xvpVQjlnegeeNjJrhnw7nLxfMXPgiUNIOfKTm1JMsYKrLymql6SyUwSYqnNvEyATlk_-x5_zXYF_K-rxBJDBbJut2uFqbpq9F7hMeq8ORqmsaodbFxxCI">
-        
-        <div class="row pl-4 studentinfo loaddiv">
-            <input type="hidden" name="returnUrl" value="">
-            <div class="col-sm-12">
-                <div class="row">
-                    <div class="col-sm-3">
-                    </div>
-                    <div class="col-sm-6" style="text-align:center">
-                        <h4 style=" color: #8d8d8d; text-shadow: 2px 2px #ededed; font-size: 22px; margin: 20px;"><em class="resource.OnlineAdmissionAdd.AdmissionForm">Admission Form</em></h4>
-                    </div>
-                    <div class="col-sm-3 form-group pr-4">
 
-                    </div>
-
-                </div>
-            </div>
-
-
-            <div class="col-sm-12 section-div">
-                <h5><em class="resource">Academic Information</em></h5>
-                <hr>
-                <div class="row pr-4">
-                    <div class="col-sm-4 form-group">
-                        <label for="SessionId" class="form-control-label"><span class="label-name"><em class="resource">Admission Session</em></span> <span class="astericSign">✱</span></label>
-                        <select class="form-control validate" id="SessionId" name="SessionId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true">
-                            <option value="" class="resource">Select Session</option>
-                                    <option value="12" selected="">Jan-2023-Dec-2023</option>
-                                    <option value="13">Jan-2024-Dec-2024</option>
-                                    <option value="55">Mar-2025-Mar-2029</option>
-                        </select>
-                    </div>
-                    <div class="col-sm-4 form-group">
-                        <label for="ClassId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.AdmitToClass">Admit To Class</em></span> <span class="astericSign">✱</span></label>
-                        <select class="form-control validate ClassId" id="ClassId" isrequired="true" name="ClassId" validationevents="change" validationrules="IsZeroOrEmptySelected"><option value="">Select</option>
-<option value="1">One</option>
-<option value="2">Play</option>
-<option value="3">Nursery</option>
-<option value="4">Two</option>
-<option value="5">Three</option>
-<option value="6">Four</option>
-<option value="13">Five</option>
-<option value="14">Six</option>
-<option value="15">Seven</option>
-<option value="16">Class Nine Plus</option>
-<option value="17">21-22</option>
-<option value="18">spoken</option>
-<option value="19">SPOKEN</option>
-<option value="23">21-22(A)</option>
-<option value="25">21-22(D)</option>
-<option value="26">শিশু</option>
-<option value="27">two</option>
-<option value="28">class ten plus</option>
-<option value="29">one</option>
-</select>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-12 section-div" style="padding-right: 25px;">
-                <h5><em class="resource.OnlineAdmissionAdd.StudentInformation">Student Information</em></h5>
-                <hr>
-                <div class="row">
-                    <div class="col-sm-9">
-                        <div class="row studentinfo">
-                            <div class="col-sm-4 form-group">
-                                <label for="FirstName" class=" form-control-label mt-2"><span class="label-name"><em class="resource.OnlineAdmissionAdd.FirstName">First Name</em></span> <span class="astericSign">✱</span></label>
-                                <input class="form-control validate" id="FirstName" isrequired="true" name="FirstName" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsSpecialCharWithoutSpaceAndDot" value="">
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="MiddleName" class="form-control-label mt-2"><span class="label-name"><em class="resource.OnlineAdmissionAdd.MiddleName">Middle Name</em></span></label>
-                                <input class="form-control validate " id="MiddleName" isrequired="false" name="MiddleName" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsSpecialCharWithoutSpaceAndDot" value=""><div class="all-error-msg d--grid"></div>
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="LastName" class="form-control-label mt-2"><span class="label-name"><em class="resource.OnlineAdmissionAdd.LastName">Last Name</em></span></label>
-                                <input class="form-control validate " id="LastName" name="LastName" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsSpecialCharWithoutSpaceAndDot" value=""><div class="all-error-msg d--grid"></div>
-                            </div>
-
-                            <div class="col-sm-4 form-group">
-                                <label for="GenderId" class=" form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Gender">Gender</em></span> <span class="astericSign">✱</span></label>
-                                <select class="form-control validate" id="GenderId" isrequired="true" name="GenderId" validationevents="change" validationrules="IsZeroOrEmptySelected"><option value="">Select Gender</option>
-<option value="21">Male</option>
-<option value="22">Female</option>
-<option value="23">Other</option>
-<option value="1244">পুরুষ</option>
-</select>
-                            </div>
-
-                            <div class="col-sm-4 form-group">
-                                <label for="BirthDate" class="form-control-label "><span class="label-name">
-                                    <em class="resource.OnlineAdmissionAdd.DateOfBirth">Date of Birth</em>
-                                </span> <span class="astericSign">✱</span></label>
-                                <input class="form-control validate BirthDate" id="BirthDate" isrequired="true" name="BirthDate" readonly="readonly" type="text" validationevents="change" validationrules="IsNullOrEmptyOrUndefined" value="">
-                            </div>
-                            <input type="hidden" name="Age" value="0" class="Age">
-                            <div class="col-sm-4 form-group">
-                                <label for="UniqueId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.UniqueId">Unique Id</em></span></label>
-                                <input class="form-control UniqueId validate" id="UniqueId" name="UniqueId" suggestion="Add Govt. Provided Unique Id" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div><div class="suggestion-text">Add Govt. Provided Unique Id</div>
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="Mobile" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Mobile">Mobile</em></span> <span class="astericSign">✱</span></label>
-                                <input class="form-control Mobile validate" id="Mobile" isrequired="true" name="Mobile" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsOnlyNumbers" value="">
-                            </div>
-
-                            <div class="col-sm-4 form-group">
-                                <div class="col-sm-3">
-                                    <label for="Email" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Email">Email</em></span></label>
-                                </div>
-                                <input class="form-control Email validate" id="Email" isrequired="false" name="Email" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="ReligionId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Religion">Religion</em></span> <span class="astericSign">✱</span></label>
-                                <select class="form-control ReligionId validate" id="ReligionId" isrequired="true" name="ReligionId" validationevents="change" validationrules="IsZeroOrEmptySelected"><option value="">Select</option>
-<option value="55">Islam</option>
-<option value="1180">Hindu</option>
-<option value="1245">RC</option>
-</select>
-
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="BirthCertificateNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.BirthCertificateNo">Birth Certificate No</em></span></label>
-                                <input class="form-control validate" id="BirthCertificateNo" isrequired="false" name="BirthCertificateNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="NationalityId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Nationality">Nationality</em> </span> <span class="astericSign">✱</span></label>
-                                <select class="form-control NationalityId validate" id="NationalityId" isrequired="true" name="NationalityId" validationevents="change" validationrules="IsZeroOrEmptySelected"><option value="">Select Nationality</option>
-<option value="35">Bangladeshi</option>
-<option value="36">American</option>
-<option value="58">Indian</option>
-</select>
-                            </div>
-
-                            <div class="col-sm-2 form-group">
-                                <label for="Height" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Height">Height</em></span></label>
-                                <input class="form-control validate" id="Height" name="Height" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                            </div>
-                            <div class="col-sm-2 form-group">
-                                <label for="Weight" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Weight">Weight</em></span></label>
-                                <input class="form-control validate" id="Weight" name="Weight" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label for="BloodId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.BloodGroup">Blood Group</em> </span></label>
-                                <select class="form-control BloodId validate" id="BloodId" isrequired="false" name="BloodId" validationevents="change" validationrules="IsZeroOrEmptySelected"><option value="">Select</option>
-<option value="27">A (+ve)</option>
-<option value="28">A (-ve)</option>
-<option value="29">B (+ve)</option>
-<option value="30">B (-ve)</option>
-<option value="31">AB (+ve)</option>
-<option value="32">AB (-ve)</option>
-<option value="33">O (+ve)</option>
-<option value="34">O (-ve)</option>
-</select><div class="all-error-msg d--grid"></div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <div class="avatar-upload">
-                            <label for="imageUpload" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.StudentImage">Student Image</em> </span> <span class="astericSign">✱</span></label>
-                            <div class="avatar-preview" style="margin-bottom: 4px;">
-                                <div id="imagePreview"></div>
-                            </div>
-                            <div class="">
-                                <input type="file" id="imageUpload" onclick="imageUppload(this)" class="validate form-control StudentImage" accept="image/*" name="StudentPhotoFile" isrequired="true" validationrules="file:types=jpg|jpeg|png, file:size:minsize=0 &amp; maxsize = 5048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
-
-                                <input class="form-control StudentPhotoPath" id="StudentPhotoPath" name="StudentPhotoPath" type="hidden" value="">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-sm-12 section-div">
-
-                <h5><em class="resource.OnlineAdmissionAdd.PresentAddress">Present Address</em></h5>
-                <hr>
-                <div class="row pr-4">
-                    <div class="col-sm-3 form-group">
-                        <label for="PresCountryId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Country">Country</em></span> <span class="astericSign">✱</span></label>
-                        <select class="form-control validate PresCountryId OutsideEditable" id="PresCountryId" name="PresCountryId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true">
-                            <option value="" class="resource">Select Country</option>
-                                <option value="1">বাংলাদেশ</option>
-                        </select>
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PresDivisionId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Division">Division</em></span> <span class="astericSign">✱</span></label>
-                        <svg style="display: none;color: blue;" class="svg-inline--fa fa-spinner fa-w-16 fa-pulse I-loadingDiv" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path></svg><!-- <i style="display:none;color:blue" class="fas fa-spinner fa-pulse I-loadingDiv"></i> -->
-                        <select class="form-control validate PresDivisionId OutsideEditable" id="PresDivisionId" name="PresDivisionId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true" aria-invalid="false">
-                            <option value="0" class="resource">Select Division</option>
-                        </select>
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PresCityId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.District">District</em></span> <span class="astericSign">✱</span></label>
-                        <svg style="display: none;color: blue;" class="svg-inline--fa fa-spinner fa-w-16 fa-pulse I-loadingDis" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path></svg><!-- <i style="display:none;color:blue" class="fas fa-spinner fa-pulse I-loadingDis"></i> -->
-                        <select class="form-control validate PresCityId OutsideEditable" id="PresCityId" name="PresCityId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true" aria-invalid="false">
-                            <option value="0" class="resource">Select District</option>
-                        </select>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PresThanaId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Thana">Thana</em></span> <span class="astericSign">✱</span></label>
-                        <svg style="display: none;color: blue;" class="svg-inline--fa fa-spinner fa-w-16 fa-pulse I-loadingTha" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path></svg><!-- <i style="display:none;color:blue" class="fas fa-spinner fa-pulse I-loadingTha"></i> -->
-                        <select class="form-control validate PresThanaId OutsideEditable" id="PresThanaId" name="PresThanaId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true" aria-invalid="false">
-                            <option value="0" class="resource">Select Thana</option>
-                        </select>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PresHoldingNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.HoldingNo">Holding No</em></span></label>
-                        <input class="form-control validate PresHoldingNo" id="PresHoldingNo" name="PresHoldingNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PresStreet" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.StreetNo">Street No</em></span></label>
-                        <input class="form-control PresStreet validate" id="PresStreet" isrequired="false" name="PresStreet" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PresArea" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Area">Village / Area</em></span></label>
-                        <input class="form-control PresArea validate" id="PresArea" name="PresArea" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PresPostCode" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.PostCode">Post Code</em></span></label>
-                        <input class="form-control PresPostCode validate" id="PresPostCode" name="PresPostCode" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-            <div class="col-sm-12 section-div">
-                <div class="mt-3"></div>
-                <label class="kt-checkbox SameAsPermanentCheak kt-checkbox--brand">
-                    <input type="checkbox" class="SameAsPresent"> <em class="resource.StudentEntry.SameAsPresentAddress">Same as Present Address</em>
-                    <span></span>
-                </label>
-                <h5><em class="resource.OnlineAdmissionAdd.PermanentAddress">Permanent Address</em></h5>
-                <hr>
-                <div class="row pr-4">
-                    <div class="col-sm-3 form-group">
-                        <label for="PermCountryId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Country">Country</em></span> <span class="astericSign">✱</span></label>
-                        <select class="form-control validate PermCountryId OutsideEditable" id="PermCountryId" name="PermCountryId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true" aria-invalid="false">
-                            <option value="" class="resource">Select Country</option>
-                                <option value="1">বাংলাদেশ</option>
-                        </select>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PermDivisionId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Division">Division</em></span> <span class="astericSign">✱</span></label>
-                        <svg style="display: none;color: blue;" class="svg-inline--fa fa-spinner fa-w-16 fa-pulse PI-loadingDiv" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path></svg><!-- <i style="display:none;color:blue" class="fas fa-spinner fa-pulse PI-loadingDiv"></i> -->
-                        <select class="form-control validate PermDivisionId OutsideEditable" id="PermDivisionId" name="PermDivisionId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true" aria-invalid="false">
-                            <option value="0" class="resource">Select Division</option>
-                        </select>
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PermCityId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.District">District</em></span> <span class="astericSign">✱</span></label>
-                        <svg style="display: none;color: blue;" class="svg-inline--fa fa-spinner fa-w-16 fa-pulse PI-loadingDis" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path></svg><!-- <i style="display:none;color:blue" class="fas fa-spinner fa-pulse PI-loadingDis"></i> -->
-                        <select class="form-control validate PermCityId OutsideEditable" id="PermCityId" name="PermCityId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true" aria-invalid="false">
-                            <option value="0" class="resource">Select District</option>
-                        </select>
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PermThanaId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Thana">Thana</em></span> <span class="astericSign">✱</span></label>
-                        <svg style="display: none;color: blue;" class="svg-inline--fa fa-spinner fa-w-16 fa-pulse PI-loadingTha" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path></svg><!-- <i style="display:none;color:blue" class="fas fa-spinner fa-pulse PI-loadingTha"></i> -->
-                        <select class="form-control validate PermThanaId OutsideEditable" id="PermThanaId" name="PermThanaId" validationevents="change" validationrules="IsZeroOrEmptySelected" isrequired="true" aria-invalid="false">
-                            <option value="0" class="resource">Select Thana</option>
-                        </select>
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PermHoldingNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.HoldingNo">Holding No</em></span></label>
-                        <input class="form-control validate PermHoldingNo" id="PermHoldingNo" name="PermHoldingNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PermStreet" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.StreetNo">Street No</em></span></label>
-                        <input class="form-control PermStreet validate" id="PermStreet" isrequired="false" name="PermStreet" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PermArea" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Area">Village / Area</em></span></label>
-                        <input class="form-control PermArea validate" id="PermArea" name="PermArea" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PermPostCode" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.PostCode">Post Code</em></span></label>
-                        <input class="form-control PermPostCode validate" id="PermPostCode" name="PermPostCode" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-
-
-                </div>
-            </div>
-
-            <div class="col-sm-12 section-div">
-                <h5><em class="resource.OnlineAdmissionAdd.FatherSInformation">Father's Information</em></h5>
-                <hr>
-                <div class="row pr-4">
-                    <div class="col-sm-3 form-group">
-                        <label for="FatherName" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Name">Full Name</em></span> <span class="astericSign">✱</span></label>
-                        <input class="form-control validate FatherFirstName" id="FatherName" isrequired="true" name="FatherName" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsSpecialCharWithoutSpaceAndDot" value="">
-
-                    </div>
-
-                    <div class="col-sm-3 form-group">
-                        <label for="FatherOccupation" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Occupation">Occupation</em></span></label>
-                        <input class="form-control FatherOccupation validate" id="FatherOccupation" name="FatherOccupation" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-
-                    <div class="col-sm-3 form-group">
-                        <label for="FatherMobile" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Mobile">Mobile</em></span></label>
-                        <input class="form-control FatherMobile validate" id="FatherMobile" name="FatherMobile" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsOnlyNumbers" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="FatherEducation" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Education">Education</em></span></label>
-                        <input class="form-control  validate" id="FatherEducation" name="FatherEducation" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="FatherOfficeAddress" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.OfficeAddress">Office Address</em></span></label>
-                        <input class="form-control  validate" id="FatherOfficeAddress" name="FatherOfficeAddress" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="FatherOfficePhone" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.OfficePhone">Office Phone</em></span></label>
-                        <input class="form-control FatherOfficePhone validate" id="FatherOfficePhone" name="FatherOfficePhone" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="FatherNationalId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.NID">NID</em></span></label>
-                        <input class="form-control FatherNationalId validate" id="FatherNationalId" name="FatherNationalId" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="FatherPassportNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.PassportNo">Passport No</em></span></label>
-                        <input class="form-control FatherPassportNo validate" id="FatherPassportNo" name="FatherPassportNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="FatherDoB" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.DateOfBirth">Date of Birth</em></span></label>
-                        <input class="form-control FatherDoB validate" id="FatherDoB" name="FatherDoB" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="FBrthCertificateNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.BrthCertificateNo">Brth Certificate No</em></span></label>
-                        <input class="form-control FatherOccupation validate" id="FBrthCertificateNo" name="FBrthCertificateNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="FatherDeathYear" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.DeathYearIfDied">Death Year(if died)</em></span></label>
-                        <input class="form-control FatherDeathYear validate" id="FatherDeathYear" name="FatherDeathYear" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="FatherPhoto" class="form-control-label"><em class="resource.OnlineAdmissionAdd.Photo">Photo</em></label>
-                        <input type="file" class="validate form-control FatherPhoto" name="FatherPhotoFile" isrequired="true" validationrules="file:types = jpg|jpeg|png, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-sm-12 section-div">
-                <h5><em class="resource.OnlineAdmissionAdd.MotherSInformation">Mother's Information</em></h5>
-                <hr>
-                <div class="row pr-4">
-                    <div class="col-sm-3 form-group">
-                        <label for="MotherName" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Name">Full Name</em></span> <span class="astericSign">✱</span></label>
-                        <input class="form-control validate FatherFirstName" id="MotherName" isrequired="true" name="MotherName" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsSpecialCharWithoutSpaceAndDot" value="">
-
-                    </div>
-
-                    <div class="col-sm-3 form-group">
-                        <label for="MotherOccupation" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Occupation">Occupation</em></span></label>
-                        <input class="form-control FatherOccupation validate" id="MotherOccupation" name="MotherOccupation" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-
-                    <div class="col-sm-3 form-group">
-                        <label for="MotherMobile" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Mobile">Mobile</em></span></label>
-                        <input class="form-control FatherMobile validate" id="MotherMobile" name="MotherMobile" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsOnlyNumbers" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="MotherEducation" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Education">Education</em></span></label>
-                        <input class="form-control  validate" id="MotherEducation" name="MotherEducation" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="MotherOfficeAddress" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.OfficeAddress">Office Address</em></span></label>
-                        <input class="form-control  validate" id="MotherOfficeAddress" name="MotherOfficeAddress" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="MotherOfficePhone" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.OfficePhone">Office Phone</em></span></label>
-                        <input class="form-control  validate" id="MotherOfficePhone" name="MotherOfficePhone" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="MotherNationalId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.NID">NID</em></span></label>
-                        <input class="form-control  validate" id="MotherNationalId" name="MotherNationalId" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="MotherPassportNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.PassportNo">Passport No</em></span></label>
-                        <input class="form-control validate" id="MotherPassportNo" name="MotherPassportNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="MotherDoB" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.DateOfBirth">Date of Birth</em></span></label>
-                        <input class="form-control FatherDoB validate" id="MotherDoB" name="MotherDoB" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="MBrthCertificateNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.BirthCertificateNo">Birth Certificate No</em></span></label>
-                        <input class="form-control FatherOccupation validate" id="MBrthCertificateNo" name="MBrthCertificateNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="MotherDeathYear" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.DeathYearIfDied">Death Year(if died)</em></span></label>
-                        <input class="form-control FatherDeathYear validate" id="MotherDeathYear" name="MotherDeathYear" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="MotherPhoto" class="form-control-label"><em class="resource.OnlineAdmissionAdd.Photo">Photo</em></label>
-                        <input type="file" class="validate form-control MotherPhoto" name="MotherPhotoFile" isrequired="true" validationrules="file:types = jpg|jpeg|png, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-sm-12 section-div">
-                <h5><em class="resource.OnlineAdmissionAdd.LocalGuardianSInformation">Local Guardian's Information</em></h5>
-                <hr>
-                <div class="row pr-4">
-                    <div class="col-sm-3 form-group">
-                        <label for="LocGuardianFirstName" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Name">Full Name</em></span></label>
-                        <input class="form-control validate FatherFirstName" id="LocGuardianFirstName" name="LocGuardianFirstName" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsSpecialCharWithoutSpaceAndDot" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-
-                    <div class="col-sm-3 form-group">
-                        <label for="LocGuardianRelationship" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Relationship">Relationship</em></span></label>
-                        <input class="form-control FatherOccupation validate" id="LocGuardianRelationship" name="LocGuardianRelationship" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-
-                    <div class="col-sm-3 form-group">
-                        <label for="LocGuardianMobile" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Mobile">Mobile</em></span></label>
-                        <input class="form-control FatherMobile validate" id="LocGuardianMobile" name="LocGuardianMobile" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsOnlyNumbers" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="LocalGurdianNationalId" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.NID">NID</em></span></label>
-                        <input class="form-control  validate" id="LocalGurdianNationalId" name="LocalGurdianNationalId" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="LocalGurdianPassportNo" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.PassportNo">Passport No</em></span></label>
-                        <input class="form-control validate" id="LocalGurdianPassportNo" name="LocalGurdianPassportNo" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="LocalGurdianPhoto" class="form-control-label"><em class="resource.OnlineAdmissionAdd.Photo">Photo</em></label>
-                        <input type="file" class="validate form-control MotherPhoto" name="LocalGurdianPhotoFile" validationrules="file:types = jpg|jpeg|png, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
-                    </div>
-                </div>
-
-            </div>
-
-                <div class="col-sm-12 section-div subject-div-parent">
-                    <h5><em class="resource">Student Subjects</em></h5>
-                    <hr>
-                    <div class="row pr-4">
-                                  <div class="col-sm-6">
-                            <table class="table table-bordered example" id="example" style="width:100%">
-                                <thead>
-                                    <tr class="selectallRow">
-                                        <th>
-                                            <div class="form-check">
-                                                <label class="kt-checkbox kt-checkbox--brand" id="kt-checkboxAll">
-                                                    <input type="checkbox" class="form-check-input parent-checkbox" onchange="selectAllSubjects(this)">
-                                                    <span></span>
-                                                    <em class="checkbox-text" style="font-weight:500;">Select All</em>
-                                                </label>
-                                            </div>
-                                        </th>
-                                        <th>Subjects</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="appendsubject">
-                                </tbody>
-                            </table>
-                        </div>
-
-                            <div class="col-sm-5 form-group">
-                            <label for="OptionalSubjectId" class="form-control-label"><em class="resource">Optional Subject</em></label>
-                            <select class="form-control" id="OptionalSubjectId" name="OptionalSubjectId">
-                                <option value="">Select</option>
-                            </select>
-                        </div>
-
-                        
-                    </div>
-                </div>
-     
-
-
-            <div class="col-sm-12 section-div">
-                <h5><em class="resource.OnlineAdmissionAdd.PerviousInstitutionInformation">Pervious Institution Information</em></h5>
-                <hr>
-                <div class="row pr-4">
-                    <div class="col-sm-3 form-group">
-                        <label for="PrevSchool" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.InstitutionName">Institution Name</em></span></label>
-                        <input class="form-control PrevSchool validate" id="PrevSchool" name="PrevSchool" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="PrevClass" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Class">Class</em></span></label>
-                        <input class="form-control PrevClass validate" id="PrevClass" name="PrevClass" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-2 form-group">
-                        <label for="PrevSection" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Section">Section</em></span></label>
-                        <input class="form-control PrevSection validate" id="PrevSection" name="PrevSection" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                    <div class="col-sm-2 form-group">
-                        <label for="PrevRoll" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.RollNumber">Roll Number</em></span></label>
-                        <input class="form-control PrevRoll validate" id="PrevRoll" name="PrevRoll" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined,IsOnlyNumbers" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-
-                    <div class="col-sm-2 form-group">
-                        <label for="PrevResult" class="form-control-label"><span class="label-name"><em class="resource.OnlineAdmissionAdd.Result">Result</em></span></label>
-                        <input class="form-control PrevResult validate" id="PrevResult" name="PrevResult" type="text" validationevents="keyup" validationrules="IsNullOrEmptyOrUndefined" value=""><div class="all-error-msg d--grid"></div>
-
-                    </div>
-                </div>
-
-            </div>
-                    <div class="col-sm-12 pb-4">
-                        <h5><em class="resource.OnlineAdmissionAdd.EducationalBoardInformation">Educational Board Information</em></h5>
-                        <hr>
-
-                            <div class="row pr-4 pb-4">
-                                <input class="form-control readonly-bg-grey id" id="" name="VmStudentPreviousExams[0].Id" type="hidden" value="0" readonly="">
-                                <div class="col-sm-3 examname">
-                                    <h6>SSC</h6>
-                                    <input class="form-control readonly-bg-grey" id="" name="VmStudentPreviousExams[0].ExamName" type="hidden" value="1223">
-                                </div>
-                                <div class="col-sm-2">
-                                    <label for="example-text-input" class="form-control-label"> <em class="resource.OnlineAdmissionAdd.ExamYear">Exam Year</em></label>
-                                    <input class="form-control readonly-bg-grey examyear" id="" name="VmStudentPreviousExams[0].ExamYear" type="text">
-                                </div>
-                                <div class="col-sm-2">
-                                    <label for="example-text-input" class="form-control-label"><em class="resource.OnlineAdmissionAdd.RollNumber">Roll Number</em></label>
-                                    <input class="form-control readonly-bg-grey roll" id="" name="VmStudentPreviousExams[0].RollNumber" type="text">
-                                </div>
-                                <div class="col-sm-2">
-                                    <label for="example-text-input" class="form-control-label"> <em class="resource.OnlineAdmissionAdd.RegistrationNo">Registration No</em></label>
-                                    <input class="form-control readonly-bg-grey regNo" id="" name="VmStudentPreviousExams[0].RegNumber" type="text">
-                                </div>
-                                <div class="col-sm-2">
-                                    <label for="example-text-input" class="form-control-label"> <em class="resource.OnlineAdmissionAdd.Result">Result</em></label>
-                                    <input class="form-control readonly-bg-grey result" id="" name="VmStudentPreviousExams[0].Result" type="text">
-                                </div>
-                            </div>
-                            <div class="row pr-4 pb-4">
-                                <input class="form-control readonly-bg-grey id" id="" name="VmStudentPreviousExams[1].Id" type="hidden" value="0" readonly="">
-                                <div class="col-sm-3 examname">
-                                    <h6>HSC</h6>
-                                    <input class="form-control readonly-bg-grey" id="" name="VmStudentPreviousExams[1].ExamName" type="hidden" value="1224">
-                                </div>
-                                <div class="col-sm-2">
-                                    <label for="example-text-input" class="form-control-label"> <em class="resource.OnlineAdmissionAdd.ExamYear">Exam Year</em></label>
-                                    <input class="form-control readonly-bg-grey examyear" id="" name="VmStudentPreviousExams[1].ExamYear" type="text">
-                                </div>
-                                <div class="col-sm-2">
-                                    <label for="example-text-input" class="form-control-label"><em class="resource.OnlineAdmissionAdd.RollNumber">Roll Number</em></label>
-                                    <input class="form-control readonly-bg-grey roll" id="" name="VmStudentPreviousExams[1].RollNumber" type="text">
-                                </div>
-                                <div class="col-sm-2">
-                                    <label for="example-text-input" class="form-control-label"> <em class="resource.OnlineAdmissionAdd.RegistrationNo">Registration No</em></label>
-                                    <input class="form-control readonly-bg-grey regNo" id="" name="VmStudentPreviousExams[1].RegNumber" type="text">
-                                </div>
-                                <div class="col-sm-2">
-                                    <label for="example-text-input" class="form-control-label"> <em class="resource.OnlineAdmissionAdd.Result">Result</em></label>
-                                    <input class="form-control readonly-bg-grey result" id="" name="VmStudentPreviousExams[1].Result" type="text">
-                                </div>
-                            </div>
-                    </div>
-
-            <div class="col-sm-12">
-                <h5><em class="resource.OnlineAdmissionAdd.AttachFiles">Attach Files</em></h5>
-                <hr>
-                <div class="row pr-4">
-                        <div class="col-sm-3 form-group">
-                            <input type="hidden" name="StudentRelatedFiles[0].FileForId" value="324">
-                            <label for="Birth Certificate" class="form-control-label">Birth Certificate</label>
-                            <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[0].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
-                        </div>
-                        <div class="col-sm-3 form-group">
-                            <input type="hidden" name="StudentRelatedFiles[1].FileForId" value="325">
-                            <label for="Transfer Certificate" class="form-control-label">Transfer Certificate</label>
-                            <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[1].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
-                        </div>
-                        <div class="col-sm-3 form-group">
-                            <input type="hidden" name="StudentRelatedFiles[2].FileForId" value="326">
-                            <label for="Testimonial" class="form-control-label">Testimonial</label>
-                            <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[2].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
-                        </div>
-                        <div class="col-sm-3 form-group">
-                            <input type="hidden" name="StudentRelatedFiles[3].FileForId" value="327">
-                            <label for="Academic Certificate" class="form-control-label">Academic Certificate</label>
-                            <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[3].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
-                        </div>
-                        <div class="col-sm-3 form-group">
-                            <input type="hidden" name="StudentRelatedFiles[4].FileForId" value="328">
-                            <label for="Marksheet" class="form-control-label">Marksheet</label>
-                            <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[4].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
-                        </div>
-                        <div class="col-sm-3 form-group">
-                            <input type="hidden" name="StudentRelatedFiles[5].FileForId" value="329">
-                            <label for="Testimonial" class="form-control-label">Testimonial</label>
-                            <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[5].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
-                        </div>
-                        <div class="col-sm-3 form-group">
-                            <input type="hidden" name="StudentRelatedFiles[6].FileForId" value="330">
-                            <label for="Father's NID" class="form-control-label">Father's NID</label>
-                            <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[6].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
-                        </div>
-                        <div class="col-sm-3 form-group">
-                            <input type="hidden" name="StudentRelatedFiles[7].FileForId" value="331">
-                            <label for="Mother's NID" class="form-control-label">Mother's NID</label>
-                            <input type="file" class="validate form-control MotherPhoto" name="StudentRelatedFiles[7].File" validationrules="file:types=jpg|jpeg|png|pdf|doc|docx, file:size:minsize=0 &amp; maxsize = 2048 &amp; sizeType=kb" validationevents="change" errorlocationauto="true">
-                        </div>
-                </div>
-
-            </div>
-            <div class="col-sm-12 p-5" style="text-align:center">
-                <button class="btn btn-primary" id="updateBtn"><em class="resource.OnlineAdmissionAdd.Submit">Submit</em></button>
-            </div>
-        </div>
-    </form>
  
     <!-- bootstrap js cdn -->
 
