@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #f2f3f8;
+}
+
+
+.kt-wizard-v2__nav-items > a {
+    background: transparent !important;
+}
+
+    .kt-wizard-v2__nav-items > a:hover {
+        background: #f4f6f9 !important;
+    }
+
+.kt-wizard-v2__nav-items > a {
+    background: transparent;
+}
+
+.kt-wizard-v2 .kt-wizard-v2__aside .kt-wizard-v2__nav .kt-wizard-v2__nav-items .kt-wizard-v2__nav-item[data-ktwizard-state="current"] {
+    background-color: #f4f6f9 !important;
+}
+
+
+.kt-header--fixed .kt-wrapper {
+    padding-top: 15px !important;
+}
+
+.avatar-upload {
+    position: relative;
+    max-width: 195px;
+    margin-left: 50px;
+}
+
+    .avatar-upload .avatar-edit {
+        position: absolute;
+        right: 16px;
+        z-index: 1;
+        top: 6px;
+    }
+
+        .avatar-upload .avatar-edit input {
+            display: none;
+        }
+
+            .avatar-upload .avatar-edit input + label {
+                display: inline-block;
+                width: 34px;
+                height: 34px;
+                margin-bottom: 0;
+                border-radius: 100%;
+                background: #FFFFFF;
+                border: 1px solid transparent;
+                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+                cursor: pointer;
+                font-weight: normal;
+                transition: all 0.2s ease-in-out;
+            }
+
+                .avatar-upload .avatar-edit input + label:hover {
+                    background: #f1f1f1;
+                    border-color: #d6d6d6;
+                }
+
+                .avatar-upload .avatar-edit input + label:after {
+                    font-family: 'FontAwesome';
+                    color: #757575;
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    margin: auto;
+                }
+
+    .avatar-upload .avatar-preview {
+        width: 192px;
+        height: 192px;
+        position: relative;
+        border: 6px solid #F8F8F8;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    }
+
+        .avatar-upload .avatar-preview > div {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 5px;
+        }
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .schoolName-div {
+        text-align: center;
+    }
+
+    .schoolname {
+        line-height: 30px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .schoolName-div {
+        text-align: center;
+    }
+
+    .schoolname {
+        line-height: 30px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .schoolName-div {
+        text-align: center;
+    }
+
+    .schoolname {
+        line-height: 30px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #kt_content {
+        padding: 0px 170px;
+    }
+
+    .schoolName-div {
+        text-align: left;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #kt_content {
+        padding: 0px 170px;
+    }
+
+    .schoolName-div {
+        text-align: left;
+    }
+}
+
+.studentinfo .form-group {
+    margin-bottom: 1rem !important;
+}
+
+    .studentinfo .form-group label {
+        margin-bottom: 0rem !important;
+        font-size: 12px !important;
+    }
+
+.studentinfo hr {
+    margin-top: 0rem !important;
+}
+
+.schoolname {
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 2px 2px #d8d8d8;
+}
+.mail {
+    font-size: 15px;
+
+}
+
+.address {
+    font-size: 17px;
+    font-weight: 500;
+}
+.examname {
+    padding-left: 45px;
+    padding-top: 35px;
+}
+
+.form-control {
+    padding: 2px 1rem !important;
+    height: 30px !important;
+    box-shadow: 2px 2px #e9e9e9;
+}
+
+.section-div {
+    margin-top: 25px;
+}
+
+    .section-div > h5 {
+        text-shadow: 2px 1px #dbdbdb;
+        font-size: 18px;
+    }
+
+    /* from Start code */
+
+    .btn-primary {
+        color: #fff;
+        background-color: #5867dd;
+        border-color: #5867dd;
+        color: #ffffff;
+    }
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #384ad7;
+        border-color: #2e40d4;
+    }
