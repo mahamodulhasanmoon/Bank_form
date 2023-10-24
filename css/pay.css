@@ -1,12 +1,10 @@
 html{
     font-size:100%;
-    background-color:#f7f9fb
 }
 body{
-    overflow-x:hidden;
-    font-weight:400;
-    font-family:'Open Sans';
-    line-height:24px
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 .wpb_wrapper{
     margin:50px 10px
@@ -14,14 +12,9 @@ body{
 .pull-left span{
     color:#ddd
 }
-.post-link{
-    -webkit-transition:.3s;
-    -moz-transition:.3s;
-    -ms-transition:.3s;
-    transition:.3s
-}
+
 a,a:active,a:focus,a:hover{
-    outline:0;
+ 
     text-decoration:none
 }
 p{
@@ -32,10 +25,7 @@ p{
     text-shadow:none;
     color:#fff
 }
-::selection{
-    text-shadow:none;
-    color:#fff
-}
+
 img::-moz-selection{
     background:0 0
 }
@@ -48,12 +38,6 @@ img::-moz-selection{
     position:relative;
     z-index:10;
     background:#fff;
-    padding-bottom:40px
-}
-.page-template-default #wrapper{
-    padding-bottom:0
-}
-.page-template-default #primary{
     padding-bottom:40px
 }
 .container h1,.container h2,.container h3,.container h4,.container h5{
@@ -175,7 +159,7 @@ img::-moz-selection{
     content:"\f058";
     padding-right:20px;
     font-weight:700;
-    font-family:FontAwesome;
+ 
     font-size:18px;
     text-rendering:auto;
     -webkit-font-smoothing:antialiased
@@ -217,36 +201,8 @@ img::-moz-selection{
     transition:.25s;
     font-weight:600
 }
-.navbar-default .nav:hover li a{
-    opacity:.3
-}
-.navbar-default .nav:hover li a:hover{
-    opacity:1
-}
-.navbar-default .nav li a:focus,.navbar-default .nav li a:hover{
-    outline:0;
-    background:0 0;
-    opacity:1
-}
-@media (min-width:960px){
-    .navbar.navbar-default{
-        padding:0 0;
-        border:0;
-        background-color:transparent;
-        -webkit-transition:all .25s ease-in-out;
-        -moz-transition:all .25s ease-in-out;
-        -o-transition:all .25s ease-in-out;
-        -ms-transition:all .25s ease-in-out;
-        transition:all .25s ease-in-out;
-        z-index:1090
-    }
-    .navbar-default{
-        padding:0
-    }
-}
-#single-page p{
-    margin-bottom:20px
-}
+
+
 .page-links{
     display:block;
     position:relative;
