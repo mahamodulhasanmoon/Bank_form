@@ -899,6 +899,21 @@ b {
 .kt-checkbox.kt-checkbox--primary>input:disabled~span {
 	opacity: .6
 }
+.wpb_wrapper #loginform .button, .wpcf7 .wpcf7-submit {
+    width: auto;
+    border: none;
+    color: #fff;
+    background: green !important;
+    margin-top: 5px;
+    width: 100%;
+}
+::selection {
+    background-color: #295cab;
+}
+#btn-custom{
+	background-color: #295cab;
+	color: green !important;
+}
 
 .kt-option {
 	display: -webkit-box;
